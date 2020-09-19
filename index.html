@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+    <title>Dinesh PortFolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+ 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+      </script>
+    <nav class="navbar" id="demo">
+      <div class="navbar-brand">
+        <img src="assets/dinesh_name-removebg-preview.png" alt="meher" >
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    
+      </ul>
+      <div
+        class="hamburger-icon"
+        onclick="openSideNav()"
+        id="openSideNavButton"
+      >
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="sidenav" id="sidenav">
+      <ul class="sidenav-links">
+        <li>
+          <i
+            class="fas fa-times close-sidenav"
+            id="closeSideNavButton"
+            onclick="closeSideNav()"
+          ></i>
+        </li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <header class="about-container" id="top_view">
+      <div class="about-details">
+        <div class="greeting" data-aos="zoom-in-down">
+          Hello Dude , Cool to meet you
+          <br />
+          I am
+        </div>
+        <div class="name" data-aos="zoom-in-down">
+          <h1>Dinesh Sahu</h1>
+        </div>
+         <div class="details" data-aos="fade-up"
+        data-aos-duration="2000">
+        <h1>I'm a
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ " Student.", " Web Developer.", " Android Developer."]'></span>
+</h1>
+<h2>In Love With  <span class="custom-text">&lt;/&gt;</span>.</h2>
+<script type="text/javascript"> 
+	var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+        <!-- Student | Web Developer | Android Developer | In Love With  <span class="custom-text">&lt;/&gt;</span>.
+          <br />
+          <br />-->
+  
+        </div> 
+      </div>
+      <div class="pic" data-aos="fade-up"
+      data-aos-duration="2000">
+        <img src="assets/dinesh.png" alt="" />
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="svg">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L480,224L960,192L1440,288L1440,320L960,320L480,320L0,320Z"
+        ></path>
+      </svg>
+    </header>
+
+    <div id="about" class="about-me-container">
+      <div class="about-me-header">
+        <h1 data-aos="fade-down"
+        data-aos-duration="2000">About Me</h1>
+      </div>
+      <div class="about-me-block container" data-aos="zoom-in"
+      data-aos-duration="2000">
+        <div class="about-me-image">
+          <img
+            
+            src="assets/dinesh_png_pic.png"
+            alt=""
+          />
+        </div>
+        <div  class="about-me" data-aos="fade-left"
+        data-aos-duration="2000">
+          Hey Peeps ! I am Dinesh sahu. I'm a Cse undergraduate who is curious about human
+behaviour. I'm currently pursuing Btech in College of Engineering and Technology,
+Bhubaneswar. I Self taught myself all these years to do things that my mind can comprehend.
+My goal is to build applications that are scalable and efficient under the hood while providing
+engaging, pixel-perfect user experiences. Also I'm a Tech Enthusiast With interests in latest
+upcoming technologies and the Digital world.<br>
+<br>
+I'm a Web developer working with tech stacks like MERN and also a android app developer. I'm
+currently working on full stack development of web applications and native applications. I like
+building great things from scratch. I have a passion for learning and adding some new skills to
+my list. Hope I will be developing more helpful applications and products .
+        </div>
+      </div>
+    </div>
+    <div class="resume_block" data-aos="fade-up">
+
+      <div class="resume_container">
+        <div class="resume_text1" data-aos="zoom-in-down">
+          We together can make some thing great , I am ready for Developing
+        </div>
+        <div class="resume_text2" data-aos="zoom-in-up">
+          Download my CV , to get closer
+        </div>
+        <div class="resume" data-aos="fade-up"> 
+          <a class="btn btn-secondary btn-light" href="">My CV &nbsp;&nbsp; <i class="fa fa-download"></i></a>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="svg">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L480,224L960,192L1440,288L1440,320L960,320L480,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- Here will be the education  -->
+  <section id="education" class="education">
+		<br><br>
+		<h1 class="heading">EDUCATION</h1>
+		<br>
+	<div class="row">
+		<div class="col col-lg-4 col-md-4 col-sm-12" data-aos="fade-up"
+     data-aos-duration="1000">
+		<div class="card">
+			<h3>Bachelor's of Technology in  CSE</h3>
+			<h5>College of Engineering & Technology , BHUBANESWAR</h5>
+                        
+                        <p>2018-2022</p>
+			<p>CGPA: 8.0/10</p>
+		</div>
+		</div>
+		<div class="col col-lg-4 col-md-4 col-sm-12" data-aos="fade-up"
+     data-aos-duration="1000">
+		<div class="card">
+			<h3>Senior School Certification Examination</h3>
+			<h5>MP & EV ENGLISH MEDIUM SCHOOL GAJUWAKA VIZAG VP</h5>
+			<h5>CBSE Board</h5>
+                        <p>2018</p>
+			<p>68%</p>
+		</div>
+	    </div>
+		<div class="col col-lg-4 col-md-4 col-sm-12" data-aos="fade-up"
+     data-aos-duration="1000">
+		<div class="card">
+			<h3>Secondary School Examination</h3>
+			<h5>KENDRIYA VIDYALAYA GAJAPATI</h5>
+			<h5>CBSE Board</h5>
+                        <p>2016</p>
+                        <p>CGPA: 9.2/10</p>
+	    </div>
+	    </div>
+	</div>
+</section>
+   <!-- here will be the skills block -->
+  <div id="skills" class="skills">
+  	<h1>SKILLS</h1>
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-5" data-aos="zoom-in-right" data-aos-duration="1000">
+            <h3 class="progress-title">HTML 5</h3>
+            <div class="progress-outer">
+                <div class="progress" >
+                    <div class="progress-bar progress-bar-striped progress-bar-danger" style="width:90%;"></div>
+                    <div class="progress-value"><span>90</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title" >CSS3</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped one" style="width:80%;"></div>
+                    <div class="progress-value"><span>80</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">BOOTSTRAP</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped two" style="width:90%;"></div>
+                    <div class="progress-value"><span>90</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">JAVA SCRIPT</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped three" style="width:70%;"></div>
+                    <div class="progress-value"><span>70</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">NODE JS</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped four" style="width:65%;"></div>
+                    <div class="progress-value"><span>65</span>%</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-5" data-aos="zoom-in-left" data-aos-duration="1000">
+            <h3 class="progress-title">MONGO DB</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped five" style="width:75%;"></div>
+                    <div class="progress-value"><span>75</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">C</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped six" style="width:80%;"></div>
+                    <div class="progress-value"><span>80</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">C++</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped seven" style="width:75%;"></div>
+                    <div class="progress-value"><span>75</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">ANDROID</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped eight" style="width:85%;"></div>
+                    <div class="progress-value"><span>85</span>%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">CORE JAVA</h3>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped nine" style="width:70%;"></div>
+                    <div class="progress-value"><span>70</span>%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- internships container -->
+     <div id="experience" class="internships-container">
+      <div class="internships-header">
+        <h1 data-aos="fade-down">Internships </h1>
+      </div>
+      <div class="experiences">
+        <div class="experience" data-aos="zoom-in" data-aos-duration="800">
+          <img
+            src="assets/internship2.jpeg"
+            alt=""
+          />
+          <div class="experience_details">
+            <p class="experience_name">
+              ON CLOUD 18 , WEB DEVELOPMENT INTERNSHIP
+            </p>
+            <p class="experience_info">
+             My internship with Oncloud18 recently came to an end. I worked as a web developer for the Oncloud18 . I with my team developed a whole new website. I'm incredibly thankful for the opportunity to be a part of their website. Wishing for more such great type of interships ahead.
+            </p>
+          </div>
+        </div>
+        <div class="experience" data-aos="zoom-in" data-aos-duration="800">
+          <img
+            src="assets/internship1.jpeg"
+            alt=""
+          />
+          <div class="experience_details">
+            <p class="experience_name">
+              THE LEGAL CHRONICLE , WEB DEVELOPMENT INTERNSHIP
+            </p>
+            <p class="experience_info">
+            Interned as a Web Developer at The legal Chronicle. Worked on client-based projects. I with my team developed a whole new website .I was responsible for Front-end and hosting part of the website made with html,css,bootstrap,javascript. It's been an amazing 3 months at Tlc. From the day i walked into the internship as a web developer to where i am Today,the whole journey has been a roller coaster ride of great learning,building connections,taking responsibility.It's been an absolute pleasure having been part of an amazing work and looking forward to an exciting internships ahead.
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        style="background-color: rgb(223, 223, 223);"
+      >
+        <path 
+        data-aos="fade-up"
+          fill="#383838"
+          fill-opacity="1"
+          d="M0,96L60,85.3C120,75,240,53,360,90.7C480,128,600,224,720,272C840,320,960,320,1080,277.3C1200,235,1320,149,1380,106.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+
+
+
+
+    <!-- projects container -->
+    <div id="projects" class="projects-container">
+      <div class="project-header">
+        <h1 data-aos="zoom-in">
+          My Projects !
+        </h1>
+      </div>
+        <div class="projects">
+          <div class="project"> 
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project11.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project12.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project13.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project14.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project15.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project16.png"
+                    alt=""
+                  />
+                </div>
+              </div> 
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="project-description">
+             <h4>THE LEGAL CHRONICLE WEBSITE</h4>
+             <p>Full fledged website made using PHP , HTML 5 , CSS , BOOTSTRAP 4, JAVA SCRIPT , JQUERY , AJAX , MYSQL.<br>
+User friendly for both desktop and mobile view.</p>
+           
+              <a class="btn btn-block btn-dark" href="http://thelegalchronicle.org" target="blank">VIEW PROJECT</a>
+            </div>
+          </div>
+          <div class="project"> 
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project2.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project21.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project22.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/project23.png"
+                    alt=""
+                  />
+                </div>
+              </div> 
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="project-description">
+             <h4>ON CLOUD 18 WEBSITE</h4>
+             <p>Made using  HTML 5 , CSS , BOOTSTRAP 4, JAVA SCRIPT .<br></p>
+           
+            <!--  <a class="btn btn-block btn-dark" href="http://thelegalchronicle.org" target="blank">VIEW PROJECT</a> -->
+            </div>
+          </div>
+          
+        </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="svg">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L480,224L960,192L1440,288L1440,320L960,320L480,320L0,320Z"
+        ></path>
+      </svg>
+    </div> 
+   <!-- testimonial -->
+   <div class="testimonial" data-aos="zoom-in" data-aos-duration="2000">
+   <div class="container my-5 justify-content-center">
+    <div class=" row justify-content-center ">
+        <div class="col-lg-6 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="assets/logo1.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Dinesh posseses good leadership qualities. He portrays advanced knowledge of Front-end development along with Node JS and PHP back-end programming languages. He is very hardworking and we wish him best of luck for all his future endeavors. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">THE LEGAL CHRONICLE</h4>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-half-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+<!-- contact -->
+<div id="contact" class="contact">
+	<h1>CONTACT</h1>
+	<h4 style="text-align: center;">Want To Say Hello?</h4>
+	<p>Don't hesitate to reach out if you'd like to chat about projects, life, or just have a good ol' fashioned conversation.</p>
+	<p><i class="fas fa-envelope fa-2x"></i>Mail Me at <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Dineshsahu003@gmail.com" target="_blank">Dineshsahu003@gmail.com</a></p>
+	<p><i class="fab fa-linkedin fa-2x"></i>Connect With Me Via <a href="https://www.linkedin.com/in/dinesh-sahu-a54692174">LINKEDIN</a></p>
+	<p><i class="fab fa-github-square fa-2x"></i>Meet Me at <a href="https://github.com/dinesh-geek">GITHUB</a></p>
+</div>
+<footer>
+<svg viewBox="0 0 120 28">
+ <defs> 
+   <mask id="xxx">
+     <circle cx="7" cy="12" r="40" fill="#fff" />
+   </mask>
+   
+   <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+           1 0 0 0 0  
+           0 1 0 0 0  
+           0 0 1 0 0  
+           0 0 0 13 -9" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+  	</filter>
+  
+      <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+
+  </defs> 
+
+   <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+   <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+ 
+  <g class="topball">
+      <a href="#top_view">
+  <circle class="ball" cx="110" cy="8" r="4" stroke="none" stroke-width="0" fill="black" />
+  </a>
+
+    <g class="arrow" >
+    <polyline class="" points="108,8 110,6 112,8" fill="none"  />
+    <polyline class="" points="110,6 110,10.5" fill="none"  />
+    </g>
+    
+  </g>
+  <g class="gooeff">
+  <circle class="drop drop1" cx="20" cy="2" r="1.8"  />
+  <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
+  <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
+    <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+  
+    <!-- g mask="url(#xxx)">
+    <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+    </g>
+  </g -->
+
+</svg>
+
+  <div><h3>Website Designed & Developed By DINESH SAHU</h3>
+	<p>All Rights are Reserved</p></div>
+</footer>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ 
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 1600,
+      });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.progress-value > span').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 1500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});	 
+
+    </script>
+
+  </body>
+</html>
